@@ -2,7 +2,7 @@ height <- c(121,164,148,186,178,156,179,163,152,131,138,166,189,123,178,161,149,
 weight <- c(53,71,56,79,68,55,67,62,51,48,53,68,83,54,74,58,52,78,67,52) #Dependent variable
 
 #Linear modelling using lm()
-model1 <-lm(weight~height) 
+model1 <-lm(weight~height) #Using ~ is the syntax. i.e dependent ~ independent.
 
 #Assumptions for linearity -
 #1.Outlier Test ()
