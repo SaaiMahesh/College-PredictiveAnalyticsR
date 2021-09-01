@@ -25,7 +25,7 @@ kurtosis(weight)
 cor.test(weight,height) #Since p is lesser than 0.05. Hence we accept alternative null hypothesis there is linearity between the variable. 
 #0.859 (cor) correlation means that there is 85.9% correlation between the variables.
 
-model1
+model1 #This shows us the linear model that we've obtained using lm() function.
 #Hence, weight = -8.295 + 0.4413 * height is the linear line equation.
 
 summary(model1)
