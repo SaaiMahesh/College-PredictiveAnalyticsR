@@ -41,7 +41,8 @@ View(test_data)
 model1<-lm(train_data$Price~train_data$SqFt,data=train_data)
 summary(model1)
 
-#R Squared values says that 33 percent is explained by square feet on price. We have to add other factors too since the R value is less. Hence, we build another model with more predictors added to independent variables.
+#R Squared values says that 33 percent is explained by square feet on price. We have to add other factors too since the R squared value is less. 
+#Hence, we build another model with more predictors added to independent variables.
 
 model2<-lm(train_data$Price~train_data$Bedrooms+SqFt,data=train_data) #Thus we add bedrooms to sqft.
 summary(model2)
