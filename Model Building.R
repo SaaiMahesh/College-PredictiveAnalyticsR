@@ -53,6 +53,8 @@ summary(model2)
 #Adding a predict column to the train data set
 train_data$prediction<-predict(model2)
 train_data$residual<-residuals(model2)
+
+#Visualizing the model
 plot(train_data$prediction,train_data$residual)
 hist(train_data$residual)
 hist(train_data$prediction)
