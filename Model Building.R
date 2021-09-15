@@ -38,7 +38,7 @@ View(test_data)
 
 #Model building on train data and later we build on test. 
 
-model1<-lm(train_data$Price~train_data$SqFt,data=train_data)
+model1<-lm(train_data$Price~train_data$SqFt,data=train_data) #dependent~independent
 summary(model1)
 
 #R Squared values says that 33 percent is explained by square feet on price. We have to add other factors too since the R squared value is less. 
