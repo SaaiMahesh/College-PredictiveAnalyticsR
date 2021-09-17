@@ -10,7 +10,7 @@ View(data)
 #We can use this dataset to predict if the people have purchased the books using florence column(0,1) through logistic regression.
 #GLM (Generalized linear model is inherited for Linear Model as special linear modelling for logistic regression). Here, family used to specify binomial form. We are using Florence and M as dependent and independent respectively.
 model1<-glm(Florence~M,data=data,family=binomial()) 
-summary(model1) #If p < 0.05, it is significant. AIC - Aitkens's Information Criterion. Lower the AIC, better the model since it means there is lesser variation.
+summary(model1) #If p < 0.05, it is significant. AIC - Akaikes's Information Criterion. Lower the AIC, better the model since it means there is lesser variation.
 
 #Model prediction
 data$pred<-predict(model1,type='response') #Predicting the model. The type="response" option tells R to output probabilities of the form P(Y = 1|X) resulting between 0 and 1 (since its probabilities).
