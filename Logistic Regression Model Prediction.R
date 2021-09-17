@@ -65,6 +65,8 @@ data$purch<-ifelse(data$pred > 0.1,1,0)
 table(Actual=data$Florence,Predicted=data$purch) #Showing more errors than previous model so we have to change the predictors for independent variables.
 
 
-#Sensitivity = TP/FN+TP
-#Specificity = TN/TN+FP
+#Sensitivity (TRUE Positive Rate)= TP/FN+TP #To show positive result
+#Specificity (TRUE Negative Rate)= TN/TN+FP #To show negative result
 #NOTE: #glm(DV~.) #The dot gives us all the variables within the dataset
+#FP is also known as Type 1 error
+#FN is also known as Type 2 error
