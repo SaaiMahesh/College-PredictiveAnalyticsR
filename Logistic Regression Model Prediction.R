@@ -9,7 +9,7 @@ View(data)
 #Florence - Book bought or not
 #We can use this dataset to predict if the people have purchased the books using florence column(0,1) through logistic regression.
 #GLM (Generalized linear model is inherited for Linear Model as special linear modelling for logistic regression). Here, family used to specify binomial form. We are using Florence and M as dependent and independent respectively.
-model1<-glm(Florence~M,data=data,family=binomial()) 
+model1<-glm(Florence~M,data=data,family=binomial()) #Family is binomial so as to get 0s and 1s in output.
 summary(model1) #If p < 0.05, it is significant. AIC - Akaikes's Information Criterion. Lower the AIC, better the model since it means there is lesser variation.
 
 #Model prediction
@@ -18,6 +18,8 @@ View(data) #To view the newly updated data, wherein pred column was added after 
 
 #Creating threshold to result for the pred column where it shows that if it is >0.1 it is 1 and <0.1 it is 0.
 data$purch<-ifelse(data$pred>0.1,1,0)
+
+#Viewing the confusion matrix to check validity of prediction
 table(Actual=data$Florence,Predicted=data$purch) #Gets us the confusion matrix for predicted and actual values. Where we defined Actual for actual values of florence and Predicted for predicted values.
 #Actual values of 0 shows that people did not buy the book but predicted shows 382 meaning that it is wrong prediction.(A0-P1 should be low, FALSE POSITIVE)
 #Actual values of 1 shows that people did buy the book but predicted shows 85 did not meaning that it is wrong prediction.. (A1-P0 should be lower values FALSE NEGATIVE)
