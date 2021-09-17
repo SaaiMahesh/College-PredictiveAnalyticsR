@@ -22,3 +22,17 @@ data$preddiab<-ifelse(data$pred > 0.1,1,0)
 
 #Viewing the confusion matrix to check validity of prediction
 table(Actual=data$diabetes,Predicted=data$preddiab)
+
+#Sensitivity (TRUE Positive Rate) (Higher the better)
+TP<-260
+FN<-8
+sens<-TP/(TP+FN)
+sensitivity<-sens*100
+sensitivity #97% positivity rate of diabetes (does have diabetes)
+
+#Specificity (TRUE Negative Rate) (Lesser the better)
+FP<-361
+TN<-139
+specif<-TN/(TN+FP) 
+specificity<-specif*100
+specificity #27% negativity rate of diabetes (don't have diabetes)
