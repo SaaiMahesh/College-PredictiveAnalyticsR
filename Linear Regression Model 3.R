@@ -64,6 +64,9 @@ plot(model2)
 test_data$pred<-predict(model2,test_data) #Predicting the values of model2 against the test data.
 R_Sq<-cor(test_data$Price,test_data$pred)*cor(test_data$Price,test_data$pred) #Checking the accuracy by using correlation * correlation to get R^2. (since correlation is aka R)
 
+#IMP NOTE: DV is numerical and IDV is numerical directly use Linear Regression
+#DV is numerical and IDV are categorical then convert IDV to dummy variables and use Linear Regression.
+#DV is categorical and IDV are categorical directly use Logistic Regression.
 
 #We use dummy variables when the DV (dependent variable) is numerical and IDV are cateogrical. We set the IDV split to dummy variables to be used as our predictors (newly formed IDV).
 #Dummy variables - It used to represent categorical data (by mapping numerical/alphabetic data to 0s and 1s) and can be used for modelling. Before the data is split, dummy variables should be added if required for any categorical data that is present in the dataset.
