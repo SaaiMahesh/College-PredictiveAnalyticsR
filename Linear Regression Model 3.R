@@ -81,5 +81,5 @@ house$Bricked <-ifelse(house$Brick=='yes',1,0) #Adds a new column for Bricked wh
 house$East<-ifelse(house$Neighborhood=='East',1,0) #Adds a new column for East where it shows 1 for East and 0 if not East.
 house$West<-ifelse(house$Neighborhood=='West',1,0) #Adds a new column for West where it shows 1 for West and 0 if not West.
 
-#Using the dummy variables we created for the prediction
+#Using the dummy variables we created on for the linear model building (NOTE: price is DV and is of numeric)
 model<-lm(house$price~house$East+house$West+house$Bricked)
