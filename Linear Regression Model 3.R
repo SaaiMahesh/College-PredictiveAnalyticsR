@@ -65,7 +65,7 @@ test_data$pred<-predict(model2,test_data) #Predicting the values of model2 again
 R_Sq<-cor(test_data$Price,test_data$pred)*cor(test_data$Price,test_data$pred) #Checking the accuracy by using correlation * correlation to get R^2. (since correlation is aka R)
 
 
-#We use dummy variables when the DV (dependent variable) is numerical. It has to be converted to categorical for regression (either linear or logistic regression)
+#We use dummy variables when the DV (dependent variable) is numerical and IDV are cateogrical. We set the IDV split to dummy variables to be used as our predictors (newly formed IDV).
 #Dummy variables - It used to represent categorical data (by mapping numerical/alphabetic data to 0s and 1s) and can be used for modelling. Before the data is split, dummy variables should be added if required for any categorical data that is present in the dataset.
 #We create n-1 variables for dummy COLUMN variables where n is number of categories.
 
