@@ -73,7 +73,7 @@ house<-read.csv("house_prices.csv")
 #Creating dummy column variables for Bricked (Since Brick has 2 variables so n-1 = 2-1 = 1 we need 1 dummy column variable that is Bricked)
 house$Bricked <-ifelse(house$Brick=='yes',1,0) #Adds a new column for Bricked where it shows 1 for yes and 0 for no.
 
-#Create dummy variables for neighborhood. (Neighborhood has 3 categories so we do n-1 i.e 3-1 = 2 dummy column variables are needed)
+#Create dummy variables for neighborhood. (Neighborhood has 3 variables so we do n-1 i.e 3-1 = 2 dummy column variables are needed)
 house$East<-ifelse(house$Neighborhood=='East',1,0) #Adds a new column for East where it shows 1 for East and 0 if not East.
 house$West<-ifelse(house$Neighborhood=='West',1,0) #Adds a new column for West where it shows 1 for West and 0 if not West.
 
