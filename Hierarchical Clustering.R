@@ -42,10 +42,10 @@ numclust<-NbClust(datascaled,distance='euclidean',min.nc=2,max.nc=6,method='cent
 #Plotting using the cut dendogram using the number of optimal clusters
 plot(cluster1,main='Hierachial Cluster - Centroid') 
 rect.hclust(cluster1,k=5)
+#Interpretation: All the values within the red rectangular clusters that are cut, are of similar type when we compare to the original dataset.
 
 #Viewing the number of data values under each cut cluster
 cutcluster<-cutree(cluster1,k=5)
-table(cutcluster) #This is the optimal number of values for each cut cluster
-
+table(cutcluster) #This is the number of values for each cut cluster
 
 
