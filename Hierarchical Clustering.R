@@ -1,15 +1,15 @@
 #Note: It is unsupervised because we are not splitting the data into train and test data.
 library(cluster.datasets)
 data(nutrients.meat.fish.fowl.1959)
-data<-nutrients.meat.fish.fowl.1959
+orgdata<-nutrients.meat.fish.fowl.1959
 
-View(data)
-str(data)
-summary(data)
+View(orgdata)
+str(orgdata)
+summary(orgdata)
 
 #Cleaning data
 sum(is.na(data)) #No NAs present
-data<-data[,-1] #Removing categorical column
+data<-orgdata[,-1] #Removing categorical column
 
 #Scaling data
 datascaled<-scale(data) #Scaling data
@@ -26,7 +26,7 @@ cluster4<-hclust(dist(datascaled),method='single') #Creating hierarchical cluste
 
 
 #Plotting the dendograms for the hierarchical clusters
-plot(cluster1,main='Hierachial Cluster - Centroid') #Additional arguments are labels,cex and hang.
+plot(cluster1,main='Hierachial Cluster - Centroid') #Additional arguments are labels,cex and hang. Ex: We can do labels=orgdata$name to get names for dendogram
 
 plot(cluster2,main='Hierachial Cluster - Average')
 
