@@ -39,7 +39,7 @@ library(NbClust)
 numclust<-NbClust(datascaled,distance='euclidean',min.nc=2,max.nc=6,method='centroid') #We put max as 6 since there are max of 6 variables
 #We get optimal number of clusters as 5
 
-#Plotting using the cut dendogram using the number of optimal clusters
+#Plotting the cut dendogram using the number of optimal clusters
 plot(cluster1,main='Hierachial Cluster - Centroid') 
 rect.hclust(cluster1,k=5)
 #Interpretation: All the values within the red rectangular clusters that are cut, are of similar type when we compare to the original dataset.
