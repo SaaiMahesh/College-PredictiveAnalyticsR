@@ -36,3 +36,6 @@ wpam<-pam(x=wbinform[,keepcols],k=12,keep.diss=TRUE,keep.data=TRUE)
 
 #To see the medoid observations
 wpam$medoids
+
+#Making a silhouette plot
+plot(wpam,which.plots=2,main='Silhouette Plot')
