@@ -2,7 +2,7 @@
 #Using the World Bank Data in this exercise
 
 install.package('WDI')
-require(WDI) #aka library(WDI)
+require(WDI) #AKA library(WDI)
 
 #To pull information on the indicators for all the countries in the list, some countries dont have data
 indicators<-c("BX.KLT.DINV.WD.GD.ZS","NY.GDP.DEFL.KD.ZG","NY.GDP.MKTP.CD","NY.GDP.MKTP.KD.ZG","NY.GDP.PCAP.CD","NY.GDP.PCAP.KD.ZG","TG.VAL.TOTL.GD.ZS")
@@ -38,4 +38,8 @@ wpam<-pam(x=wbinform[,keepcols],k=12,keep.diss=TRUE,keep.data=TRUE)
 wpam$medoids
 
 #Making a silhouette plot
-plot(wpam,which.plots=2,main='Silhouette Plot')
+plot(wpam,which.plots=2,main='Silhouette Plot') 
+
+#Plot interpretation
+#Silhouette plot for country clustering where each line represents an observation and each grouping of lines is a cluster.
+#Observations that fit the cluster well have large positive lines and observations that dont fit well have small or negative lines.
