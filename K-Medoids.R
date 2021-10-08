@@ -2,7 +2,7 @@
 #Using the World Bank Data in this exercise
 
 install.package('WDI')
-require(WDI) 
+require(WDI) #aka library(WDI)
 
 #To pull information on the indicators for all the countries in the list, some countries dont have data
 indicators<-c("BX.KLT.DINV.WD.GD.ZS","NY.GDP.DEFL.KD.ZG","NY.GDP.MKTP.CD","NY.GDP.MKTP.KD.ZG","NY.GDP.PCAP.CD","NY.GDP.PCAP.KD.ZG","TG.VAL.TOTL.GD.ZS")
