@@ -43,3 +43,4 @@ plot(wpam,which.plots=2,main='Silhouette Plot')
 #Plot interpretation
 #Silhouette plot for country clustering where each line represents an observation and each grouping of lines is a cluster.
 #Observations that fit the cluster well have large positive lines and observations that dont fit well have small or negative lines.
+#Larger average silhouette width for the cluster means it is better fit
