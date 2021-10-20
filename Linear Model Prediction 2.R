@@ -21,9 +21,7 @@ outlierTest(model1)
 #plot the model to find the outliers and remove the rows
 plot(model1,4)
 #To remove the row use,
-newmtcars1<-mtcars[-25, ]
-newmtcars2<-mtcars[-20, ]
-newmtcars3<-mtcars[-18, ]
+newmtcars3<-mtcars[-c(25,20,18)]
 View(newmtcars3)
 
 #model with new dataset
