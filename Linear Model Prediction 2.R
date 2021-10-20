@@ -29,13 +29,7 @@ modelNew<-lm(newmtcars$mpg~newmtcars$disp)
 modelNew
 plot(modelNew,4)
 
-outlierTest(modelNew)
-
-
-View(newmtcars1)
-model2<-lm(mpg~)
-plot()
-
+outlierTest(modelNew) #Outlier Test
 
 #2.Residual
 resi<-residuals(model1)
@@ -63,8 +57,6 @@ kurtosis(disp)
 #H1: THere is a relationship between mpg and displacemet
 cor.test(mpg,disp)
 #p-value=9.38e-10 <0.05, hence reject null hypothesis, there is a relationship between mpg and disp
-
-
 
 
 #Use hp(dependent) and disp(independent)
