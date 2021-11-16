@@ -1,4 +1,5 @@
 #Building Linear Models
+data(PimaIndiansDiabetes)
 data<-PimaIndiansDiabetes
 View(data)
 sum(is.na(data))
